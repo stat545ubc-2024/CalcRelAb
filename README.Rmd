@@ -26,7 +26,7 @@ While the phyloseq datatype is full of information, it does not parse naturally 
 You can install the development version of CalcRelAb like so:
 
 ``` r
-install_github("org/repo", build_vignettes = TRUE, ref = "0.1.0")
+install_github("stat545ubc-2024/CalcRelAb", build_vignettes = TRUE, ref = "0.1.0")
 ```
 
 ## Example
@@ -38,6 +38,8 @@ We can see that a column has been created called "Relative_Abundance".
 ```{r example}
 library(CalcRelAb)
 library(phyloseq)
+library(tidyverse)
+
 data("esophagus")
 calc_relative_abunance(esophagus)
 ```
