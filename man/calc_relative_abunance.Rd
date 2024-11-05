@@ -22,7 +22,7 @@ Starting from a phyloseq object, this applies the psmelt function to convert dat
 data(esophagus, package = "phyloseq")
 data(GlobalPatterns, package = "phyloseq")
 data(soilrep, package = "phyloseq")
-calc_relative_abunance(data(esophagus))
-calc_relative_abunance(data(GlobalPatterns))
-calc_relative_abunance(data(soilrep))
+calc_relative_abunance(esophagus)
+calc_relative_abunance(GlobalPatterns)
+calc_relative_abunance(soilrep)
 }
