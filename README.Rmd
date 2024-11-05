@@ -18,8 +18,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of CalcRelAb is to easily manipulate phyloseq objects for graphing useful information in R. 
+The goal of CalcRelAb is to easily manipulate phyloseq objects for graphing useful information in R. This relies heavily on the functionality and data in the [phyloseq package by joey711](https://joey711.github.io/phyloseq/).
+
 While the phyloseq datatype is full of information, it does not parse naturally into ggplot, nor does it contain / allow for calculation of relative abundance values. This package contains the function calc_relative_abundance() which first uses the phyloseq function psmelt() to convert a phyloseq object into a simple R dataframe. It then appends a column onto the dataframe containing the relative abundance of each OTU for its sample.
+
+The package also contains data from the phyloseq package, saved and documented in the /data directory.
 
 ## Installation
 
@@ -31,7 +34,7 @@ install_github("stat545ubc-2024/CalcRelAb", build_vignettes = TRUE, ref = "0.1.0
 
 ## Example
 
-This is a basic example. We are using the soilrep phyloseq object that comes with the phyloseq package. This is passed through our calc_relative_abunance() function. 
+This is a basic example. We are using the esophagus phyloseq object that comes with the phyloseq package, and is contained within our data. This is passed through our calc_relative_abunance() function. 
 
 We can see that a column has been created called "Relative_Abundance".
 
