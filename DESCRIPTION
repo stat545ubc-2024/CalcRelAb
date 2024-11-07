@@ -4,7 +4,7 @@ Version: 0.1.2
 Authors@R: 
     person("Imogen", "Porter", , "imogenp@student.ubc.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9451-8606"))
-Description: When provided a phyloseq object, transforms it into a dataframe using psmelt(). This is used to return an R dataframe of microbiome composition data containing sample ID and all other provided metadata, taxonomic information, abundance values, and relative abundance values. Abundance values of NA are dropped.
+Description: When provided a phyloseq object, transforms it into a dataframe using psmelt(). This is used to return an R tibble of microbiome composition data containing sample ID and all other provided metadata, taxonomic information, abundance values, and relative abundance values. Abundance values of NA are dropped.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
