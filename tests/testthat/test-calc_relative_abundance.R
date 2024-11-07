@@ -1,7 +1,7 @@
 test_that("Testing variable class specificity", {
-  expect_error(calc_relative_abunance(2:10))
-  expect_error(calc_relative_abunance("This is a character!"))
-  expect_error(calc_relative_abunance(data_frame("Num"=1:5,"Let"=c("a","b","c","d","e"))))
+  expect_error(calc_relative_abundance(2:10))
+  expect_error(calc_relative_abundance("This is a character!"))
+  expect_error(calc_relative_abundance(data_frame("Num"=1:5,"Let"=c("a","b","c","d","e"))))
 })
 
 
@@ -33,11 +33,11 @@ test_that("Testing output accuracy", {
   expected_rel_abundance <- c(0.88,0.5,0.5,0.08,0.04,0)
   expected_abundance <- c(22,10,10,2,1,0)
   expected_OTU <- c("OTU3","OTU1","OTU3","OTU2","OTU1","OTU2")
-  expect_equal(calc_relative_abunance(sample_physeq)$Relative_Abundance,
+  expect_equal(calc_relative_abundance(sample_physeq)$Relative_Abundance,
                expected_rel_abundance)
-  expect_equal(calc_relative_abunance(sample_physeq)$Abundance,
+  expect_equal(calc_relative_abundance(sample_physeq)$Abundance,
                expected_abundance)
-  expect_equal(calc_relative_abunance(sample_physeq)$OTU,
+  expect_equal(calc_relative_abundance(sample_physeq)$OTU,
                expected_OTU)
   rm(list=c("otu_matrix","otu_table","sample_data_frame","sample_data","taxonomy_matrix","tax_table",
        "sample_physeq","expected_OTU","expected_abundance","expected_rel_abundance"))

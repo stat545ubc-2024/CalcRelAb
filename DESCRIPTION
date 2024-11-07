@@ -1,6 +1,6 @@
 Package: CalcRelAb
 Title: Getting Relative Abundances From Phyloseq
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Imogen", "Porter", , "imogenp@student.ubc.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9451-8606"))

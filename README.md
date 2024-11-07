@@ -30,11 +30,18 @@ You can install the development version of CalcRelAb like so:
 install_github("stat545ubc-2024/CalcRelAb", build_vignettes = TRUE, ref = "0.1.0")
 ```
 
+You will also likely need to install the published version of phyloseq,
+recommended by the developers to be installed through BiocManager:
+
+``` r
+BiocManager::install("phyloseq")
+```
+
 ## Example
 
 This is a basic example. We are using the esophagus phyloseq object that
 comes with the phyloseq package, and is contained within our data. This
-is passed through our calc_relative_abunance() function.
+is passed through our calc_relative_abundance() function.
 
 We can see that a column has been created called “Relative_Abundance”.
 
@@ -54,7 +61,7 @@ library(tidyverse)
 #> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 data("esophagus")
-calc_relative_abunance(esophagus)
+calc_relative_abundance(esophagus)
 #> # A tibble: 174 × 4
 #>    OTU     Sample Abundance Relative_Abundance
 #>    <chr>   <chr>      <dbl>              <dbl>
