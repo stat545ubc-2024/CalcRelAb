@@ -33,10 +33,13 @@ You can install the development version of CalcRelAb like so:
 install_github("stat545ubc-2024/CalcRelAb", ref = "0.1.2")
 ```
 
-You will also likely need to install the published version of phyloseq,
-recommended by the developers to be installed through BiocManager:
+This package relies on phyloseq, available from the developers on
+BiocManager. The phyloseq package will be automatically installed if
+missing, or you can install it yourself:
 
 ``` r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 BiocManager::install("phyloseq")
 ```
 
