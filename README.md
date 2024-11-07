@@ -15,8 +15,8 @@ While the phyloseq datatype is full of information, it does not parse
 naturally into ggplot, nor does it contain / allow for calculation of
 relative abundance values. This package contains the function
 calc_relative_abundance() which first uses the phyloseq function
-psmelt() to convert a phyloseq object into a simple R dataframe. It then
-appends a column onto the dataframe containing the relative abundance of
+psmelt() to convert a phyloseq object into a simple R tibble. It then
+appends a column onto the tibble containing the relative abundance of
 each OTU for its sample.
 
 This output can then be used for simple visualisation in base R or
@@ -46,7 +46,8 @@ This is a basic example. We are using the esophagus phyloseq object that
 comes with the phyloseq package, and is contained within our data. This
 is passed through our calc_relative_abundance() function.
 
-We can see that a column has been created called “Relative_Abundance”.
+We can see that a tibble is output, with a new column that has been
+created called “Relative_Abundance”.
 
 ``` r
 library(CalcRelAb)
