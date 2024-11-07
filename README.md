@@ -19,6 +19,9 @@ psmelt() to convert a phyloseq object into a simple R dataframe. It then
 appends a column onto the dataframe containing the relative abundance of
 each OTU for its sample.
 
+This output can then be used for simple visualisation in base R or
+ggplot, or saved to simple data formats such as .csv.
+
 The package also contains data from the phyloseq package, saved and
 documented in the /data directory.
 
@@ -27,7 +30,7 @@ documented in the /data directory.
 You can install the development version of CalcRelAb like so:
 
 ``` r
-install_github("stat545ubc-2024/CalcRelAb", build_vignettes = TRUE, ref = "0.1.0")
+install_github("stat545ubc-2024/CalcRelAb", ref = "0.1.2")
 ```
 
 You will also likely need to install the published version of phyloseq,
